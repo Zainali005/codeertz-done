@@ -13,13 +13,20 @@ const MobileMenu = ({ logo, bg, transparent = true }) => {
           <div className="row align-items-center">
             <div className="col-6">
               <div className="tp-logo">
-                <a href="#"><img src={`/assets/img/logo/siteLogo.svg`} alt="" /></a>
+                <a href="#">
+                  <img
+                    src={`/assets/img/logo/head-logop.png`}
+                    style={{ width: '200px', height: '100px' }}
+                    alt=""
+                  />
+                </a>
               </div>
+
             </div>
             <div className="col-6">
               <div className="bar text-end">
-                <button className="tp-menu-bar" aria-label='bars' onClick={() => setSidebarOpen(true)} 
-                type="button"><i className="fal fa-bars"></i></button>
+                <button className="tp-menu-bar" aria-label='bars' onClick={() => setSidebarOpen(true)}
+                  type="button"><i className="fal fa-bars"></i></button>
               </div>
             </div>
           </div>
