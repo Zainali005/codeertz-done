@@ -1,0 +1,127 @@
+@forward 'components/theme';
+@forward 'components/spacing';
+@forward 'components/animate';
+@forward 'components/custom-animation';
+@forward 'components/buttons';
+@forward 'components/animation';
+@forward 'components/preloader';
+@forward 'components/background';
+@forward 'components/carousel';
+@forward 'components/offcanvas';
+@forward 'components/breadcrumb';
+@forward 'components/accordion';
+@forward 'components/tab';
+@forward 'components/modal';
+@forward 'components/section-title';
+@forward 'layout/header';
+@forward 'layout/meanmenu';
+@forward 'layout/mobile-menu';
+@forward 'layout/cart-checkout';
+@forward 'layout/hero';
+@forward 'layout/creative';
+@forward 'layout/cta';
+@forward 'layout/brand';
+@forward 'layout/service';
+@forward 'layout/feature';
+@forward 'layout/business';
+@forward 'layout/project';
+@forward 'layout/price';
+@forward 'layout/about';
+@forward 'layout/testimonial';
+@forward 'layout/team';
+@forward 'layout/mission';
+@forward 'layout/job';
+@forward 'layout/chose';
+@forward 'layout/case';
+@forward 'layout/product';
+@forward 'layout/industri';
+@forward 'layout/blog';
+@forward 'layout/news';
+@forward 'layout/newsletter';
+@forward 'layout/contact';
+@forward 'layout/footer';
+
+
+@font-face {
+    font-family: "TTFirsNeue-Black";
+    font-display: swap;
+    src: url("../fonts/fonts/TTFirsNeue-Black.ttf")format("truetype");
+  }
+  @font-face {
+    font-family: "TTFirsNeue-ExtraBold";
+    font-display: swap;
+    src: url("../fonts/fonts/TTFirsNeue-ExtraBold.ttf")format("truetype");
+  }
+  @font-face {
+    font-family: "TTFirsNeue-Bold";
+    font-display: swap;
+    src: url("../fonts/fonts/TTFirsNeue-Bold.ttf")format("truetype");
+  }
+  @font-face {
+    font-family: "TTFirsNeue-DemiBold";
+    font-display: swap;
+    src: url("../fonts/fonts/TTFirsNeue-DemiBold.ttf")format("truetype");
+  }
+  @font-face {
+    font-family: "TTFirsNeue-ExtraLight";
+    font-display: swap;
+    src: url("../fonts/fonts/TTFirsNeue-ExtraLight.ttf")format("truetype");
+  }
+  @font-face {
+    font-family: "TTFirsNeue-Light";
+    font-display: swap;
+    src: url("../fonts/fonts/TTFirsNeue-Light.ttf")format("truetype");
+  }
+  @font-face {
+    font-family: "TTFirsNeue-Medium";
+    font-display: swap;
+    src: url("../fonts/fonts/TTFirsNeue-Medium.ttf")format("truetype");
+  }
+  @font-face {
+    font-family: "TTFirsNeue-Regular";
+    font-display: swap;
+    src: url("../fonts/fonts/TTFirsNeue-Regular.ttf")format("truetype");
+  }
+  body {
+    font-family: "TTFirsNeue-Regular";
+  font-display: swap;}
+
+  body p {
+    font-family: "TTFirsNeue-Light";
+  font-display: swap;}
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "TTFirsNeue-Medium";
+  font-display: swap;}
+
+  .TTFirsNeue-Black {
+    font-family: "TTFirsNeue-Black";
+  font-display: swap;}
+
+  .TTFirsNeue-ExtraBold {
+    font-family: "TTFirsNeue-ExtraBold";
+  font-display: swap;}
+
+  .TTFirsNeue-Bold {
+    font-family: "TTFirsNeue-Bold";
+  font-display: swap;}
+
+  .TTFirsNeue-DemiBold {
+    font-family: "TTFirsNeue-DemiBold";
+  font-display: swap;}
+
+  .TTFirsNeue-ExtraLight {
+    font-family: "TTFirsNeue-ExtraLight";
+  font-display: swap;}
+
+  .TTFirsNeue-Light {
+    font-family: "TTFirsNeue-Light";
+  font-display: swap;}
+
+  .TTFirsNeue-Medium {
+    font-family: "TTFirsNeue-Medium";
+  font-display: swap;}
+
+  .TTFirsNeue-Regular {
+    font-family: "TTFirsNeue-Regular";
+  font-display: swap;}

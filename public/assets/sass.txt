@@ -1,0 +1,1 @@
+sass --watch "C:\Users\Farhan Firoz\Dropbox\Farhan Firoz\collax\assets\scss\main.scss":"C:\Users\Farhan Firoz\Dropbox\Farhan Firoz\collax\assets\css\style.css"

@@ -1,0 +1,505 @@
+@import '~bootstrap/scss/bootstrap';
+@import 'node_modules/react-modal-video/scss/modal-video.scss';
+@import "swiper/css/bundle";
+@import 'react-toastify/dist/ReactToastify.css';
+@import 'react-18-image-lightbox/style.css';
+@import '../../public/assets/scss/main.scss';
+
+
+.terms-content {
+    h5 {
+        color: #36adb5;
+        margin: 20px 0 0 0;
+        font-size: 26px;
+    }
+    p {
+        margin: 15px 0 0 0;
+        b {
+            font-family: "TTFirsNeue-Medium";
+            color: var(--tp-common-black) ;
+        }
+        a {
+            color: #36adb5;
+            text-decoration: underline;
+        }
+    }
+}
+.postbox__text {
+    p {
+        b {
+            color: #36adb5;
+            font-family: "TTFirsNeue-Medium";
+        }
+    }
+}
+
+.title-img > span {
+    margin-bottom: -9px !important;
+}
+
+
+
+.BookCallModal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    min-height: 100vh;
+    padding: 50px 25px;
+    background: rgb(0 0 0 / 64%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+
+    .BookCallContainer {
+        max-width: 1045px;
+        width: 100%;
+        background: #fff;
+        border-radius: 10px;
+        padding: 0;
+        position: relative;
+
+        @media all and (max-width: 667px) {
+            padding: 0;
+        }
+
+        iframe {
+            width: 100%;
+            height: 700px;
+            border-radius: 10px;
+            z-index: 99;
+            position: relative;
+
+            @media all and (max-width: 991px) {
+                height: 500px;
+            }
+            @media all and (max-width: 667px) {
+                height: 400px;
+            }
+        }
+
+        .closeFrame {
+            position: absolute;
+            right: -10px;
+            top: -10px;
+            width: 30px;
+            height: 30px;
+            background: #ff2e2e;
+            z-index: 99;
+            font-size: 0;
+            border-radius: 100%;
+
+            @media all and (max-width: 667px) {
+                width: 22px;
+                height: 22px;
+            }
+
+            &:before,
+            &:after {
+                content: "";
+                width: 3px;
+                height: 12px;
+                background: #fff;
+                position: absolute;
+                left: 13px;
+                top: 9px;
+                transform: rotate(45deg);
+                @media all and (max-width: 667px) {
+                    width: 2px;
+                    height: 10px;
+                    left: 10px;
+                    top: 6px;
+                }
+            }
+
+            &:after {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    &:before {
+        content: "";
+        content: "";
+        border: 8px solid #e3e3e3;
+        border-radius: 50%;
+        border-top: 8px solid #36ADB5;
+        width: 75px;
+        height: 75px;
+        animation: spin 2s linear infinite;
+        position: absolute;
+        left: calc(50% - 45px);
+        top: calc(50% - 45px);
+        z-index: 1;
+
+        @media all and (max-width: 767px) {
+            border: 5px solid #e3e3e3;
+            border-top: 5px solid #36ADB5;
+            width: 50px;
+            height: 50px;
+            left: calc(50% - 25px);
+            top: calc(50% - 25px);
+        }
+    }
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  .relative {
+    position: relative;
+  }
+  .caseStudyCard {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    box-shadow: 0 0 5px rgb(0 0 0 / 15%);
+    border-radius: 20px;
+    padding: 25px;
+    cursor: pointer;
+    position: relative;
+
+    @media all and (max-width: 767px) {
+        border-radius: 10px;
+        padding: 15px;
+        margin-bottom: 40px;
+        height: calc(100% - 40px);
+    }
+
+    
+    img {
+        max-width: 100%;
+        border-radius: 20px;
+
+        &.absolute-img {
+            min-width: 963px;
+            position: absolute;
+            right: 160px;
+            top: 120px;
+
+            @media all and (max-width: 1199px) {
+                min-width: 700px;
+            }
+            @media all and (max-width: 991px) {
+                min-width: 500px;
+                right: 80px;
+                top: 90px;
+            }
+
+            @media all and (max-width: 767px) {
+                min-width: inherit;
+                right: 0;
+                top: 0;
+                position: relative;
+                margin: 50px 0 -142px 0;
+                z-index: 222;
+                width: 100%;
+            }
+        }
+
+        @media all and (max-width: 767px) {
+            border-radius: 10px;
+            margin: 30px auto;
+            display: block;
+        }
+    }
+    .caseStudyCard-caption {
+        padding-top: 20px;
+        padding-bottom: 100px;
+
+        @media all and (max-width: 767px) {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+        
+
+        h2 {
+            color: var(--tp-common-black);
+
+            @media all and (max-width: 991px) {
+                font-size: 28px;
+            }
+            @media all and (max-width: 850px) {
+                font-size: 22px;
+            }
+        }
+        span {
+            background: #36adb5;
+            padding: 5px 16px;
+            display: inline-block;
+            line-height: normal;
+            border-radius: 20px;
+            color: #fff;
+            font-size: 12px;
+            margin: 10px 0;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin: 20px 0 0 0;
+            @media all and (max-width: 850px) {
+                font-size: 14px;
+            }
+        }
+        .caseStudyCard-caption-foot {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #e6e6e6;
+            margin: 20px 0 0 0;
+            padding: 20px 25px 0 25px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 20px;
+
+            @media all and (max-width: 767px) {
+                position: relative;
+                bottom: 0;
+            }
+
+            > small {
+                font-size: 14px;
+                color: #c8c8c8;
+            }
+            .caseStudyCard-posted {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+
+                @media all and (max-width: 850px) {
+                    gap: 10px;
+                }
+
+                img {
+                    width: 100%;
+                    max-width: 42px;
+                    height: 42px;
+                    margin: 0;
+                    object-fit: cover;
+                    border-radius: 100%;
+                    border: 2px solid #d7d7d7;
+                }
+
+                h5 {
+                    display: flex;
+                    flex-flow: column;
+                    font-size: 16px;
+                    margin: 0;
+                    color: var(--tp-common-black);
+
+                    @media all and (max-width: 850px) {
+                        font-size: 14px;
+                    }
+
+                    small {
+                        font-size: 10px;
+                        color: #8f8f8f;
+                    }
+                }
+            }
+        }
+        &.bottom-border {
+            border-bottom: 1px solid #f3f3f3;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+    }
+    &.detail {
+        box-shadow: none;
+        padding: 0;
+        .caseStudyCard-caption:not(.content) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding:0;
+
+            @media all and (max-width: 991px) {
+                flex-flow: column;
+            }
+            h2 {
+                display: flex;
+                flex-flow: column;
+                align-items: start;
+            }
+            .caseStudyCard-caption-foot {
+                padding: 25px 0;
+                border: none;
+                margin: 0;
+                justify-content: space-between;
+                align-items: center;
+                position: static;
+                width: 100%;
+
+                @media all and (max-width: 991px) {
+                    width: 100%;
+                }
+            }       
+        }
+
+        .caseStudyCard-caption {
+            &.content {
+                p {
+                    margin: 0 0 20px 0;
+                }
+                h4 {
+                    color: var(--tp-common-black);
+                    margin: 0 0 23px 0;
+                    font-size: 26px;
+
+                    @media all and (max-width: 667px) {
+                        font-size: 24px;
+                        text-align: left;
+
+                        br {
+                            display: none;
+                        }
+                    }
+                }
+               &.align-center {
+                align-items: center;
+               }
+
+               .caseStudy-card-box {
+                padding: 15px;
+                border-radius: 15px;
+                height: 100%;
+                background-color: #fff;
+
+                h4 {
+                    margin: 20px 0 12px 0;
+                    font-size: 20px;
+                }
+                p {
+                   font-size: 14px; 
+                }
+                .img-frame {
+                    border-radius: 10px;
+                }
+               }
+
+               .case-inner-content {
+                width: 100%;
+                padding: 25px;
+                background: #F1F1F1;
+                border-radius: 36px;
+                margin-top: 30px;
+
+                img {
+                    margin-bottom: 30px;
+                }
+               }
+            }
+        }    
+    }
+}  
+
+.xecu-caseStudy-section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background: url(../../public/assets/img/case/CaseStudy-New7.webp);
+    background-size: cover;
+    border-radius: 20px;
+    padding-left: 35px;
+    padding-right: 35px;
+
+    @media all and (max-width: 767px) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        border-radius: 10px;
+    }
+    @media all and (max-width: 667px) {
+        padding: 25px;
+    }
+
+    h3 {
+        color: #fff;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 41px;
+        color: #FFFFFF;
+
+        @media all and (max-width: 767px) {
+            font-size: 26px;
+        line-height: 28px;
+        }
+        @media all and (max-width: 667px) {
+            font-size: 20px;
+            line-height: 26px;
+        }
+    }
+    p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 21px;
+        color: #FFFFFF;
+
+        @media all and (max-width: 767px) {
+            font-size: 14px;
+        line-height: 18px;
+        }
+    }
+
+    .caseStudyCard {
+        &.detail {
+            background: none;
+
+            .caseStudyCard-caption {
+                padding-bottom: 0;
+            }
+        }
+    }
+}
+
+
+.container {
+    &.container-custom-case {
+        max-width: 1280px;
+
+        .case-max-w-p {
+            max-width: 1016px;
+            margin-left: auto !important;
+            margin-right: auto !important;
+
+            @media all and (max-width: 767px) {
+                text-align: left;
+            }
+
+            &.case-max-w-p1 {
+                max-width: 697px;
+            }
+        }
+
+        .case-mid-content {
+            padding-top: 380px;
+            
+
+            @media all and (max-width: 1199px) {
+                padding-top: 300px;
+            }
+            @media all and (max-width: 767px) {
+                padding-top: 0;
+            }
+            h4 {
+                margin-bottom: 80px !important;
+
+                @media all and (max-width: 767px) {
+                    margin-bottom: 20px !important;
+                }
+            }
+        }
+    }
+}

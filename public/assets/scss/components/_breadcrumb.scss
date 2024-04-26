@@ -1,0 +1,106 @@
+@use '../utils' as *;
+
+
+.breadcrumb{
+    &__pt-310{
+        padding-top: 300px;
+        padding-bottom: 145px;
+        @media #{$md,$xs} {
+            padding-top: 120px;
+        }
+    }
+    &__title{
+        font-size: 60px;
+        color: #fff;
+        font-weight: 700;
+        margin: 0;
+        display: flex;
+        flex-flow: column;
+        align-items: flex-start;
+        gap: 6px;
+        line-height: 1.1;
+        
+        @media #{$md} {
+            font-size: 40px;
+         }
+        @media #{$xs} {
+            font-size: 40px;
+         }
+
+         @media all and (max-width: 667px) {
+            font-size: 26px;
+         }
+
+         .tp-highlight {
+            svg {
+                width: auto;
+            }
+         }
+
+         small {
+            font-size: 12px;
+            background: #36adb5;
+            padding: 6px 15px;
+            border-radius: 50px;
+            display: inline-block;
+         }
+    }
+}
+.ac-about-shape-img {
+	position: absolute;
+	bottom: -17px;
+	left: 34px;
+    z-index: 999;
+}
+.ac-testimonial-space{
+    padding-top: 115px;
+    padding-bottom: 130px;
+    @media #{$xs} {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+.breadcrumb__area {
+    background-color: var(--tp-theme-1);
+    margin-top: 123px;
+    padding-top: 50px;
+
+    .text-right {
+        text-align: right;
+    }
+
+    .title-img {
+        img {
+            width: auto !important;
+            height: 260px !important;
+            margin-left: auto !important;
+            min-width: inherit !important;
+            max-width: inherit !important;
+        }
+    }
+    @media #{$xl} {
+        background-size: cover;
+        background-position: right;
+    }
+    @media #{$lg,$md,$xs} {
+        background-size: cover;
+        background-position: left;
+    }
+    p {
+        margin-bottom: 30px;
+        color: #ffffff;
+    }
+}
+
+
+.caseSyudy-detail-container {
+    .breadcrumb__area.p-relative {
+        margin-top: 43px;
+        padding: 50px 25px;
+        margin-bottom: 40px;
+
+        @media all and (max-width: 767px) {
+            padding: 25px 0;
+        }
+    }
+}

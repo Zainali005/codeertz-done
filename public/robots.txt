@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://Codeertz.com
+
+# Sitemaps
+Sitemap: https://Codeertz.com/sitemap.xml

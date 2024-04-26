@@ -1,0 +1,125 @@
+@use '../utils' as *;
+
+.tp-custom-accordio {
+    & .accordion-items {
+        margin-bottom: 20px;
+    }
+
+    & .accordion-buttons {
+        position: relative;
+        width: 100%;
+        text-align: left;
+        font-size: 18px;
+        font-weight: 700;
+        padding: 26px 30px;
+        padding-right: 55px;
+        background-color: var(--tp-common-white);
+        color: #212121;
+        border-radius: 10px 10px 0 0;
+        font-family: "TTFirsNeue-Regular";
+        font-display: swap;
+
+        @media #{$xs} {
+            font-size: 14px;
+            padding: 20px 15px;
+            padding-right: 40px;
+        }
+
+        &::after {
+            position: absolute;
+            content: "\f063";
+            font-family: 'Font Awesome 5 Pro';
+            font-display: swap;
+            background-image: none;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 30px;
+            color: #B8BCC8;
+            width: auto;
+            height: auto;
+            font-weight: 500;
+            font-size: 14px;
+
+            @media #{$xs} {
+                right: 18px;
+            }
+        }
+
+        &.collapsed {
+            &::after {
+                content: '\f062';
+            }
+        }
+    }
+
+    & .collapsed {
+        border-radius: 10px 10px 10px 10px;
+    }
+
+    & .accordion-body {
+        background-color: var(--tp-common-white);
+        padding: 20px 45px;
+        box-shadow: 0px 25px 32px 0px rgba(0, 0, 0, 0.06);
+        position: relative;
+        z-index: 1;
+        border-radius: 0 0px 10px 10px;
+        font-size: 16px;
+
+        @media #{$xs} {
+            padding: 15px;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            height: 2px;
+            background-color: var(--tp-grey-1);
+            top: 0;
+            left: 45px;
+            right: 45px;
+
+            @media #{$xs} {
+                left: 15px;
+                right: 15px;
+            }    
+        }
+    }
+}
+
+.faq-accordio-border {
+    & .accordion-items {
+        background-color: var(--tp-common-white);
+        border: 1px solid #F5F5F5;
+        border-radius: 10px;
+    }
+
+}
+form.search-faqs {
+    max-width: 490px;
+    width: 100%;
+    background: white;
+    border-radius: 10px;
+    height: 50px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #dedede;
+    padding: 0 15px 0 0;
+
+    input {
+        width: 100%;
+        height: inherit;
+        border: none;
+        outline: 0;
+        background: transparent;
+        padding: 5px 15px;
+    }
+    button {
+        img {
+            height: 22px;
+        }
+    }
+}
+
