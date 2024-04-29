@@ -1,13 +1,14 @@
-'use client';
 import React, { useState } from 'react';
 import { db } from '../../firebaseConfig';
 import { collection, addDoc } from 'firebase/firestore';
+
 const ContactForm = () => {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
         message: '',
     });
+    const [formOpen, setFormOpen] = useState(true); close
 
     const handleChange = (e) => {
         setFormData({
@@ -43,17 +44,23 @@ const ContactForm = () => {
                 email: '',
                 message: '',
             });
-            alert('Message sent successfully');
+            setFormOpen(false);
         }
     };
 
+    if (!formOpen) {
+        return <p style={{
+            fontFamily: 'Arial', fontSize: '16px', color: 'blue', fontWeight: 'bold', width: ' 500px',
+            height: '150px',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center'
+        }}>Thank you for your submission!</p>;
+
+    }
+
     return (
-        <div style={{
-            padding: '20px',
-            backgroundColor: '#fff',
-            borderRadius: '8px',
-            boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',
-        }}>
+        <div style={{ padding: '20px', backgroundColor: '#fff', borderRadius: '8px', boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)' }}>
             <h2 style={{ marginBottom: '20px' }}>Contact Us</h2>
             <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column' }}>
                 <div className="form-group" style={{ marginBottom: '20px' }}>

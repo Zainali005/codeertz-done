@@ -9,7 +9,7 @@ const hero_contents = {
   title: (
     <>
       Experience top-tier design and {" "}
-      <font class="tp-section-highlight">
+      <font className="tp-section-highlight">
         development
         <svg
           width="247"
@@ -82,15 +82,15 @@ const HeroArea = () => {
                   <button onClick={handleBookCall} className="tp-btn mr-20">
                     {btn_text}
                   </button>
-                  <Link href="#Package-Plan">
+                  {/* <Link href="#Package-Plan">
                     <a className="tp-btn outline mr-20">Explore Rates</a>
-                  </Link>
+                  </Link> */}
                   <div className="tp-hero-paly-button-four"></div>
                 </div>
 
                 <div className="hero-section-quote">
                   <span>
-                    <i class="fas fa-info-circle"></i> Includes a discovery
+                    <i className="fas fa-info-circle"></i> Includes a discovery
                     call, project audit, initial design & development discussion
                   </span>
                 </div>

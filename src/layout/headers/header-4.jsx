@@ -12,7 +12,7 @@ const HeaderFour = () => {
   const { headerSticky } = useSticky();
   const [showCalendaly, setShowCalendaly] = useState(false);
   const [showContactForm, setShowContactForm] = useState(false);
-  
+
   const handleBookCall = () => {
     setShowContactForm(true);
   };
@@ -64,7 +64,9 @@ const HeaderFour = () => {
               </div>
               <div className="col-xxl-2 col-xl-2 col-lg-2">
                 <div className="tp-header-left d-flex align-items-center justify-content-end">
-                  <div className="tp-header-login login-color-black d-none d-xxl-block "></div>
+                  <div className="tp-header-login login-color-black d-none d-xxl-block ">
+
+                  </div>
                   <div className="tp-header-yellow-button">
                     <button className="tp-btn" onClick={handleBookCall}>Contact Us</button>
                   </div>
