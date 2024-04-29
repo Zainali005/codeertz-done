@@ -60,7 +60,7 @@ const ContactForm = () => {
     }
 
     return (
-        <div style={{ padding: '20px', backgroundColor: '#fff', borderRadius: '8px', boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)' }}>
+        <div style={{ padding: '20px', backgroundColor: '#fff', borderRadius: '8px' }}>
             <h2 style={{ marginBottom: '20px' }}>Contact Us</h2>
             <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column' }}>
                 <div className="form-group" style={{ marginBottom: '20px' }}>
