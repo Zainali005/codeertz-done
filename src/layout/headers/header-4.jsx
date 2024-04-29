@@ -89,6 +89,7 @@ const HeaderFour = () => {
             justifyContent: "center",
             alignItems: "center",
             zIndex: "1000",
+            animation: 'fadeIn 1s ease-in'
           }}
         >
           <div
@@ -113,6 +114,7 @@ const HeaderFour = () => {
               strokeLinejoin="round"
               style={{
                 position: "absolute",
+                animation: 'fadeIn 1s ease-in',
                 top: "10px",
                 right: "10px",
                 cursor: "pointer",

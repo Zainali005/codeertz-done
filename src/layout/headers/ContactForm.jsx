@@ -8,7 +8,7 @@ const ContactForm = () => {
         email: '',
         message: '',
     });
-    const [formOpen, setFormOpen] = useState(true); close
+    const [formOpen, setFormOpen] = useState(true);
 
     const handleChange = (e) => {
         setFormData({
@@ -56,13 +56,12 @@ const ContactForm = () => {
             justifyContent: 'center',
             alignItems: 'center'
         }}>Thank you for your submission!</p>;
-
     }
 
     return (
-        <div style={{ padding: '20px', backgroundColor: '#fff', borderRadius: '8px' }}>
+        <div style={{ padding: '20px', backgroundColor: '#fff', borderRadius: '8px', animation: 'fadeIn 1s ease-in' }}>
             <h2 style={{ marginBottom: '20px' }}>Contact Us</h2>
-            <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column' }}>
+            <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', animation: 'fadeIn 1s ease-in' }}>
                 <div className="form-group" style={{ marginBottom: '20px' }}>
                     <label htmlFor="name" style={{ marginBottom: '5px' }}>Name:</label>
                     <input

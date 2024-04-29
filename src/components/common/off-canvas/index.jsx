@@ -80,6 +80,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
               {showContactForm && (
                 <div
                   style={{
+                    animation: 'fadeIn 1s ease-in' ,
                     position: "fixed",
                     top: "0",
                     left: "0",
@@ -117,6 +118,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
                         top: "10px",
                         right: "10px",
                         cursor: "pointer",
+                        animation: 'fadeIn 1s ease-in' 
                       }}
                       onClick={handleCloseForm}
                     >
